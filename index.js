@@ -28,5 +28,12 @@ io.on('connection', function(socket) {
     console.log('a user connected - id:' + socket.id);
 });
 
-
-
+app.get('/vote/:serie', function(req, res) {
+    io.sockets.emit('on vote', {
+        serie: req.params.serie
+    });
+    
+    return res.json({
+        msg: "Voto computado com sucesso. Obrigao"
+    });
+});
