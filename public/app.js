@@ -13,3 +13,5 @@ var nc = 10;
 var bb = 10;
 
 
+var socket = io();
+
