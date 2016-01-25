@@ -3,14 +3,20 @@
 
 <head>
     <title></title>
-    <link href="/path/to/c3.css" rel="stylesheet" type="text/css">
-    
-    <script src="/path/to/d3.v3.min.js" charset="utf-8"></script>
-    <script src="/path/to/c3.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="vote.js" charset="utf-8"></script>
 </head>
 
 <body>
-    Vote page
+    <div id="content">
+        <h3>Escolhe sua serie preferida</h3>
+        <div id="button1">
+            <button onclick="vote('bb');">Votar em breaking bad</button>
+        </div>
+        <div id="button2" onclick="vote('nc');">
+            <button>Votar em Narcos</button>
+        </div>
+    </div>
 </body>
 
 </html>
