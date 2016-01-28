@@ -12,7 +12,7 @@ http.listen(PORT, function() {
 
 // Home
 app.get('/', function(req, res) {
-    res.sendfile('index.html');
+    res.sendfile('vote.html');
 });
 
 
