@@ -5,10 +5,13 @@ function vote(serie) {
         });
 }
 
-var btns = [].slice.call(document.querySelectorAll('button'));
+var btns = [].slice.call(document.querySelector('button'));
+console.log(btns);
 btns.map(function(btn) {
   btn.addEventListener('click', function() {
+    alert(this.id);
     vote(this.id);
+    console.log(this.id);
   });
 });
 
