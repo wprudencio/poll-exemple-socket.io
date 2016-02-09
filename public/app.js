@@ -15,19 +15,24 @@ var bb = 0;
 var socket = io();
 
 socket.on('on vote', function(data) {
-    if (data.serie === 'nc') {
-    	nc = nc + 10;
-        chart.load({
-            columns: [
-                ['Narcos', nc]
-            ]
-        });
-    } else if (data.serie === 'bb') {
-    	bb = bb + 10;
-        chart.load({
-            columns: [
-                ['Breaking Bad', bb]
-            ]
-        });
-    }
+  switch(data.serie) {
+    case 'nc':
+    nc += 10;
+
+    chart.load({
+      columns: [
+        ['Narcos', nc]
+      ]
+    });
+    break;
+
+    case 'bb':
+    bb += 10;
+
+    chart.load({
+      columns: [
+        ['Breaking Bad', bb]
+      ]
+    });
+  }    
 });
