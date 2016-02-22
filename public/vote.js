@@ -4,3 +4,11 @@ function vote(serie) {
             console.log(response);
         });
 }
+
+var btns = [].slice.call(document.querySelectorAll('button'));
+btns.map(function(btn) {
+  btn.addEventListener('click', function() {
+    vote(this.id);
+  });
+});
+
